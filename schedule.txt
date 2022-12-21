@@ -1,0 +1,64 @@
+
+
+
+=================================================
+Schedule
+========
+
+JS
+---
+let, var , const
+
+Array Function
+
+loop And iteration
+
+local storage and internal data bases
+
+Json and array of Object
+
+Function ( Parametezie, non- Parametezie, default)
+
+Import export
+
+higher order function
+
+callback
+
+clouser
+
+Recurtion
+
+Memory Trashing
+
+Heap and Stack
+
+Event Loop
+
+synchornous and asynchonous programming
+
+Promises and Promises all
+
+Exception Handling
+
+Context of arrow, anonymous , normal , iife function
+
+Class, Object, Protype, Function, Inheritance
+
+CallBack hell
+
+Api using js
+
+-------------------------
+Project on js (vanila js)
+-------------------------
+Register, login ,logout ,Session , Edit Profile , Image Uploading
+
+
+
+----------------------------------------------------------
+NOTE : No excuses after these topics if class not attend
+----------------------------------------------------------
+
+
+
