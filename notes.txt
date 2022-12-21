@@ -1,0 +1,138 @@
+What is Functions :-
+******************
+
+1. It is block of code executing some secific logic , repeatedly
+or
+it is a block of code which perform some specific Task. , repeatedly
+function is some as Achaar(pickel).
+
+Why Functions
+*************
+1. Let us consider, functionality Add Application/SW
+you need to verify otp verification.
+
+app-1
+app-2
+app-3
+app-4
+app-5
+
+Every app, feature is requirement
+option 1 => some code otp verification copy + paste
+Option 2 => make a function when every required import, include, use them.
+
+Ans. Option 2
+
+Why ??
+Due to Modularity.
+Programming are of two types
+1. Monolythic(Procedural) : Every code in single file
+2. Polythic : Code at different files and one file can use another file if required.
+
+Polythic classifications:-
+*************************
+1. OOPs Based: (we make classes)
+2. Functional Based: (we make functions)
+3. Modular Based: (node every file is a module)
+Python program is also module
+
+Functions Context:-
+*****************
+1. Calling Context : using a function , call (Achar Khana)
+2. Definition Context : making a function , (definition of function)
+
+Order of Context:-
+*****************
+1. Definition Context
+2. Calling Context
+
+Function Input and Output:-
+*************************
+Mathematical Terms, what is function f(x)
+y=f(x)
+
+y=4x
+y=? when x=2 => y=8
+y depend on x
+
+function classification on the basis of use
+*******************************************
+1. Predefined
+2. Userdefined
+
+Note: Every Predefined is first time userdefined.
+printf => predefined user but Dennis Ritchtie => userdefined
+Eg : servicing => Already person => do this
+he Know how to work
+
+a)No Argument No Return Type
+**************************
+1. Definition Context:-
+********************
+	function sayHello()
+	{
+		console.log("Say Hello");
+	}
+	
+2. Calling:-
+***********
+	void()
+	sayHello()
+	
+
+b)No Argument But Return Type
+***************************
+1. Definition Context:-
+********************
+	function sayHello()
+	{
+		return ("Say Hello");
+	}
+	
+2. Calling:-
+***********
+	var x=sayHello()
+	console.log(x);
+	
+
+c)With Argument But No Return Type
+***************************
+1. Definition Context:-
+********************
+	function sayHello(name)
+	{
+		console.log("Hello "+name);
+	}
+	
+2. Calling:-
+***********
+	sayHello("anshu")
+	
+d)Argument With Return Type
+***************************
+1. Definition Context:-
+********************
+	function sayHello(name)
+	{
+		return ("Hello "+name);
+	}
+	
+2. Calling:-
+***********
+	var x=sayHello(name)
+	console.log(x);
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
