@@ -129,6 +129,88 @@ d)Argument With Return Type
 DAY 2
 ===================================================================
 
+Local scope & Global scope
+***************************
+Scope means :- it is the region, Area upto which value of a variable, function, method, object can be obtained.
+
+it is a part/block of the code upto which value of a variable, method, function, object can be found.
+var a=20;
+function demo()
+{
+	console.log("inside local scope of function a= ",a);
+	console.log("inside local scope of function b= ",b);
+}
+
+demo();
+
+console.log("inside local scope of function a= ",a);
+console.log("inside local scope of function b= ",b);
+
+Question :-
+
+this.a === window.a
+true
+a==this
+true
+a==window.a
+true
+window.a === this.a === a
+false
+
+true === a
+true === 20
+false
+
+
+
+type of this:-
+*************
+global object : scope global type :object
+
+typeof(window)
+object	
+
+Note :: null is object of global Scope
+Note :: undefined is a string datatype
+
+
+Difference B/w arrow function Normal Functions
+**********************************************
+1. Normal Function Points to the different scope of the other function when referred with this.
+	for ex:- 
+		function demo()
+		{
+			console.log(this); //point other function like setTimeout or setInterval.
+		}
+		demo = () =>
+		{
+			console.log(this); //point to same object as earlier as earlier => Global Empty
+		}
+
+Anonymous function are called as inline functions:-
+And they donot have a name, they cannot be called directly.
+rether than they are assigned to a variable and that variable used as a reference.
+
+what is grouping operator ?
+***************************
+(function definition)();
+
+This is called IIFE : immediatly invoked(calling) function Execution.
+
+()() => coupled operator or grouping operator.
+|  | 
+|  calling Context
+Definition Context
+
+
+
+
+
+
+
+
+
+
 
 
 
