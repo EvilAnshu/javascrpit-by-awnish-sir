@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form align="center">
+        <h1>Register Here..</h1>
+        Name : <input type="text" name="name" id="name"><br/>
+        Email : <input type="email" name="email" id="email"><br/>
+        Password : <input type="password" name="pass" id="pass"><br/>
+        Mobile : <input type="number" name="mob" id="mob"><br/><br/>
+        <input type="button" onclick="demo()" value="Submit">
+    </form>
+    <script>
+        function demo(){
+        var name=document.querySelector("#name").value;
+        var email=document.querySelector("#email").value;
+        var pass=document.querySelector("#pass").value;
+        var mob=document.querySelector("#mob").value;
+
+        var newObj=
+            {
+                "name" : name,
+                "email" : email,
+                "pass" : pass,
+                "mob" : mob
+            }
+        var data= JSON.parse(window.localStorage.getItem("student"))
+        if(data==null)
+        data=[newObj]
+        else
+        data.push(newObj)
+        window.localStorage.setItem('student',JSON.stringify(data));
+    }
+    </script>
+</body>
+</html>
