@@ -1,0 +1,6 @@
+514f4b63a7fc93c4c63b859df963bf0f9aa667c2 (HEAD -> master, origin/master) iife Function
+6c4a2da26846691671755162d9efe4ce62a51ec0 Start Loacal And Global Scope
+255245161c37e1fac984ed3e4b70102506f52f36 function and Type of Function
+77d35b767ef7deb249a1be927428435da0a0cb58 1 day commit
+9f7689b51800cc130f9ce62d3b6721c75a49a5ef day 0 skill check
+a387f38265fcbf87305525c874a01f6f7f94b98f Topics Cover

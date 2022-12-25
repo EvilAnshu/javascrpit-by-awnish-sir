@@ -204,7 +204,170 @@ Definition Context
 
 
 
+Storage in the Browser:-
+**********************
+Consider a program, having few variable,
+with some data, then data here will have a scope till, the VM
+(Virtual Machine is running.)
 
+
+var name="anshu";
+console.log(name);
+
+C language:-
+***********
+int a;
+printf("Enter the value of a:");
+scanf("%d",&a);
+printf("value of a = : %d",a);
+
+
+In order to make data permanent we need some kind storage mechanism. data we can store today use them later on, for analysis, reporting, and future scope.
+
+classification of data
+
+1. Data : any information that can be stored data.
+Abc is a data ..No
+ram@gmail.com ..YES
+
+Note: Data depends on use case.
+
+Classification is given bellow:-
+	1. File System
+		1. txt data	eg: html, json, .txt files
+		2. Binary Data  eg: audio, video, excel, pdf,...MsDoc, Dcox, Bson
+
+		limited data.
+		
+	2. Data Store in form excels.
+		1 Lakh Rows.
+		
+	3. Database management System:-
+		sensitive data, data security, data transaction, Bandwith data change, Database Management System
+		
+	4. Data Structure:-
+		Large Amount of data, Organise
+	
+	5. Data ware housing:-
+		Large amount of data, in physical device.
+		
+	6. Big Data (3V) or cloud
+		
+Data storage in web development
+
+1. Client side data storage
+	1. cookie
+	2. IndexDB
+	3. localStorage
+	4. Cache Memory
+	5. webSQL
+	
+	Browser > ctrl+shift+i  (dev tools) > 
+	Element | Console | Source | Application | Network
+		|		js		  |			storage		  | Api, Ajax, Webservice
+	   Dom				  |			Application,settings
+	   Virtual			cdn or local files
+	   Real
+	   
+2. Server side data storage
+	1. session 
+	2. cloud Database (mongodb, oracle, redis,....)
+	
+Local Storage:-
+*************
+	it is a permanent data storage. it will remain till browser remain.
+	Form of DataStructure :- Array of Object
+	
+	+-------------------------------+
+	| key | value (array of object) |
+	+-------------------------------+
+	| std | [{},{},{},{},{},{},{}]  |
+	+-------------------------------+
+	| tcr | [{},{},{},{},{},{},{}]  |
+	+-------------------------------+
+	
+	methods of local storage
+	************************
+	
+	Window Object => LocalStorage
+	
+	window.localStorage()
+	storage{key : value}
+	
+	std=[
+		{name : "ravi", roll:1001, class:"12th"},
+		{name : "ram", roll:1002, class:"10th"},
+		{name : "shyam", roll:1003, class:"11th"},
+	];
+	
+	How to set the data in local Storage:-
+	*************************************
+	window.localStorage.setItem('std_data', std);
+	
+	Problem:-
+	*********
+	
+	std_data : [Object,Object]
+	localStorage only accept in string format.
+	
+	Encoding and Decodig:-
+	Serialisization and De-Serialisization
+	**************************************
+	change original data to Anoter format : Encoding(Serialisization)
+	getting back another form of data to Original form is called as Decodig (De-Serialisization)
+
+	typeof(std)=> Object
+	localStorage => string
+	
+	window.localStorage.setItem('name',"ravi");
+	
+	name: "ravi"
+	How to Convert Object into string
+	**********************************
+	Array of object :JSON object => Input 
+	String : JSON string => Output
+	
+	Json.stringify()
+	
+	How to convert string into object
+	*********************************
+	Array of object :Json Object => Object
+	String : Json String => input 
+	
+	JSON.parse()
+	
+	How to set data in local storage using Encoding:-
+	************************************************
+	
+	window.localStorage.setItem('std_data' : JSON.stringify(std))
+	
+	"std=[
+		{name : "ravi", roll:1001, class:"12th"},
+		{name : "ram", roll:1002, class:"10th"},
+		{name : "shyam", roll:1003, class:"11th"},
+	]"
+	
+	How to get data in local Storage using decoding:-
+	************************************************
+	
+	var data = window.localStorage.getItem('std_data')
+	typeof(data)  =>string 
+	
+	var data = JSON.parse(window.localStorage.getItem('std_data'));
+	typeof(data) => Object
+	
+	How to remove Item or data
+	**************************
+	window.localStorage.removeItem('key')
+	
+	How to remove value from a key
+	******************************
+	window.localStorage.setItem('key',null);
+	
+	How to remove all Data 
+	**********************
+	window.localStorage.clear();
+	
 
 
 
