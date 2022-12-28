@@ -18,7 +18,19 @@
         <p>Mobile : <input type="text" name="mobile" id="mobile"></p>
         <p><input type="submit" name="submit" id="submit"></p>
     </form>
-
+    <hr/>
+    <table rules="all" border="1">
+        <thead>
+            <th>Sr No.</th>
+            <th>Roll</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Mobile</th>
+            <th>Delete|Edit</th>
+        </thead>
+        <tbody id="user-data"></tbody>
+    </table>
     <script type="text/javascript" rel="javascript">
 
         var Roll = 1001;
@@ -26,6 +38,7 @@
 
         (function(){
             setRollno();
+            loadRecord();
         })();
 
 
@@ -54,7 +67,7 @@
 
             
             setRollno();
-
+            loadRecord();
             return false;
             
             //return false;
@@ -80,6 +93,36 @@
             return Roll;
            
         }
+
+        function loadRecord(){
+            var res = "";
+        collections.forEach((data,index)=>{
+            res +=
+            `
+            <tr>
+                <td>${index+1}</td>
+                <td>${data.roll}</td>
+                <td>${data.name}</td>
+                <td>${data.email}</td>
+                <td>${data.password}</td>
+                <td>${data.mobile}</td>
+                <td><a href="javascript:handleDelete(${index})">Delete</a></td>
+            </tr>
+            `
+        });
+       
+        $("#user-data").innerHTML=res;
+        }
+        function handleDelete(index){
+            // if(window.confirm("Are You sure you want to delete."));
+            // console.log(index)
+            // console.log(collections[index])
+            collections.splice(index,1);
+            // console.log(collections[index])
+            window.localStorage.setItem("student_data",JSON.stringify(collections));
+            loadRecord();
+        }
+
 
         function $(elementName){
             return document.querySelector(elementName);
