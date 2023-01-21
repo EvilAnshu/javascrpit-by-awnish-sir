@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" onsubmit="return register(event);">
+        <p>Product ID : <input type="text" disabled name="product_id" id="product_id"></p>
+        <p>Product Name : <input type="text" name="name" id="name"></p>
+        <p>Quantity : <input type="Number " name="qty" id="qty"></p>
+        <p>Price : <input type="number" name="price" id="price"></p>
+        <p>Color : <input type="color" name="color" id="color"></p>
+        <p>Pic : <input type="file" onchange="uploadPic()" name="pic" id="pic"></p>
+        <p><input type="submit" id="submit" value="Submit" name="submit"></p>
+    </form>
+    <hr/>
+    <script>
+            var keys = ["name","qty","price","color"];
+            var prod = ["#name","#qty","#price","#color"];
+            var products = {};
+        function register(e)
+        {
+            var collections = JSON.parse(window.localStorage.getItem('product_data')) || [];
+            
+            prod.forEach((item,index)=>{
+            products[keys[index]] = $(item).value;
+            });
+            console.log(products);
+            collections.push(products);
+            console.log(collections)
+            window.localStorage.setItem("product_data",JSON.stringify(collections));
+            return false;
+        }
+        function uploadPic()
+        {
+            // console.log("Uploaded")
+            var imgUrl = $("pic").toDataURL();
+        }
+
+
+        function $(element)
+        {
+            return document.querySelector(element);
+        }
+    </script>
+</body>
+</html>
